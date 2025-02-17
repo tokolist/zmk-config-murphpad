@@ -51,33 +51,49 @@
         default_layer {
             display-name = "default";
             bindings = <
-                            &kp F1       &kp F2          &kp F3            &kp F4
-                            &kp KP_NUM   &kp KP_DIVIDE   &kp KP_MULTIPLY   &kp KP_MINUS
-                            &kp KP_N7    &kp KP_N8       &kp KP_N9         &kp KP_PLUS
-                &kp C_MUTE  &kp KP_N4    &kp KP_N5       &kp KP_N6         &trans
-                &mo 1       &kp KP_N1    &kp KP_N2       &kp KP_N3         &kp KP_ENTER
-                &kp BSPC    &kp KP_N0    &trans          &kp KP_DOT        &trans
+                            &kp ESC      &kp F2          &kp F3            &kp DEL
+                            &kp HOME     &kp KP_DIVIDE   &kp KP_MULTIPLY   &kp END
+                            &kp KP_N7    &kp KP_N8       &kp KP_N9         &kp KP_MINUS
+                &kp C_MUTE  &kp KP_N4    &kp KP_N5       &kp KP_N6         &kp KP_PLUS
+                &mo 2       &kp KP_N1    &kp KP_N2       &kp KP_N3         &kp KP_ENTER
+                &kp BSPC    &mo 1        &kp KP_N0       &kp KP_DOT        &trans
 
                             &bt BT_CLR   &rgb_ug RGB_TOG &rgb_ug RGB_EFF
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
-        };
-
+        }; 
+        
         fn_layer {
             display-name = "fn";
             bindings = <
-                            &out OUT_TOG     &bt BT_PRV       &bt BT_NXT       &trans
-                            &trans           &trans           &trans           &trans
-                            &rgb_ug RGB_HUD  &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &trans
-                &bt BT_CLR  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans
-                &trans      &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_BRI  &trans
-                &kp DEL     &rgb_ug RGB_SAD  &trans           &rgb_ug RGB_SAI  &trans
+                            &kp LA(F4)     &kp C_AL_CALC    &rgb_ug RGB_TOG    &bt BT_CLR
+                            &kp F10        &kp F11          &kp F12            &trans     
+                            &kp F7         &kp F8           &kp F9             &trans
+                &trans      &kp F4         &kp F5           &kp F6             &trans    
+                &trans      &kp F1         &kp F2           &kp F3             &trans
+                &trans      &trans         &trans           &trans             &trans           
 
                             &trans           &trans           &trans
             >;
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+                
+        };
+        
+        macro_layer {
+            display-name = "macro";
+            bindings = <
+                            &trans     &trans        &trans          &trans  
+                            &trans     &trans        &trans          &trans     
+                            &trans     &trans        &trans          &trans
+                &trans      &trans     &trans        &trans          &trans    
+                &trans      &trans     &trans        &trans          &trans
+                &trans      &trans     &trans        &trans          &trans           
 
+                            &trans           &trans           &trans
+            >;  
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+                
         };
     };
 };
